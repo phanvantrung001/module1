@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 style="position: absolute; left: 220px; top: 175px">
+      DO YoU lOvE mE ?
+    </h1>
+    <button onclick="yess()" style="position:absolute; left:285px; top:235px;">yes</button>
+     
+    <button
+      id="no"
+      onmouseover="nosss()"
+      style="position: absolute; left: 350px; top: 250px"
+    >
+      No
+    </button>
+  </body>
+</html>
+<script>
+  function yess() {
+    alert('co')
+  }
+  function nosss() {
+    var a = Math.round(Math.random()* window.innerWidth);
+    var b = Math.round(Math.random()* window.innerHeight);
+    document.getElementById('no').style.left = a + 'px';
+    document.getElementById('no').style.top = b + 'px';
+   
+  }
+</script>

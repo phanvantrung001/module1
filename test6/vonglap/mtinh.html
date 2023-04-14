@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+ 
+    <p id="giatrixuat" value=""></p>
+    
+        
+        <button class="number" value="9" id="9" onclick="insert(this.value)" >9 </button>
+        <button class="number" value="9" id="9" onclick="insert(this.value)" >8</button>
+        <button class="number" value="9" id="9" onclick="insert(this.value)" >7 </button>
+        <button class="key" value="*" id="*" onclick="insert(this.value)" >&times;</button>
+        <br><br>
+        <button class="number" value="4" id="4" onclick="insert(this.value)" >4</button>
+        <button class="number" value="5" id="5" onclick="insert(this.value)" >5</button>
+        <button class="number" value="6" id="6" onclick="insert(this.value)" >6 </button>
+        <button class="key" value="+" id="+" onclick="insert(this.value)" >+</button>
+        <br><br>
+        <button class="number" value="3" id="3" onclick="insert(this.value)" >3</button>
+        <button class="number" value="2" id="2" onclick="insert(this.value)" >2</button>
+        <button class="number" value="1" id="1" onclick="insert(this.value)" >1 </button>
+        <button class="key" value="-" id="-" onclick="insert(this.value)" >-</button>
+        <br><br>
+        <button class="*"id="trong" value="*" >*</button>
+        <button class="number" value="0" id="0" onclick="insert(this.value)" >0</button>
+        <button class="key" value="=" id="=" onclick="calculate()" >=</button>
+        
+        <button class="#" id="trong"  value="#" >#</button>
+        <br><br>
+        <button class="key" value="C" id="key_C" onclick="key_C()"> C </button>
+        <button class="key" value="CE" id="key_CE" onclick="key_CE()"> CE</button>
+        <button class="key" value="/" id="/" onclick="insert(this.value)" > &#247; </button>
+        <button class="key" value="%" id="%" onclick="insert(this.value)" >%</button>
+        
+
+
+
+       </div>
+</body>
+</html>
+<script>
+    var maytinh=""; 
+    
+    
+function insert( num){
+   document.getElementById("giatrixuat").innerText+=num;
+   document.getElementById("giatrixuat").value = maytinh;
+}
+function key_CE(){
+    document.getElementById("giatrixuat").innerText =maytinh;
+}
+function key_C() {
+    let s=document.getElementById("giatrixuat").innerText;
+    kq= s.substr(0,s.length-1);
+   document.getElementById("giatrixuat").innerText =kq;
+}
+function calculate() {
+     r = document.getElementById("giatrixuat").innerText;
+     document.getElementById("giatrixuat").innerText = eval(r);
+
+}
+
+</script>
+</script> 

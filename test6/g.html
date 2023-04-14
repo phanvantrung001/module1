@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Máy tính bỏ túi</title>
+    <link rel="stylesheet" type="text/css" href="calculate.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<style>
+    body{
+  font-family: Roboto;
+  background:#e7e8eb;
+background: -webkit-linear-gradient(to right, #4286f4, #373B44);
+background: linear-gradient(to right, #4286f4, #373B44);
+
+} 
+
+#may_tinh{
+  width:320px;
+  height:520px;
+  background-color: #eaedef;
+  top:20px;
+  margin:0 auto;
+  position:relative;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+} 
+ #ket_qua{
+  height: 120px;
+} */
+
+ #ket_qua_cu{
+  text-align: right;
+  height:20px;
+  margin:0 20px;
+  padding-top:20px;
+  font-size:15px;
+  color:#919191;
+} */
+
+#xuat_ket_qua {
+  text-align: right;
+  height:60px;
+  margin: 10px 20px;
+  font-size: 30px;
+}
+
+#keyboard{
+  height: 400px;
+}
+
+.key, .number, .trong {
+  width:50px;
+  height:50px;
+  margin: 15px;
+  float:left;
+  border-radius: 50%;
+  border-width: 0;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.number, .trong{
+  background-color: #eaedef;
+}
+
+.key, .number{
+  cursor: pointer;
+}
+
+.key:active, .number:active {
+  font-size: 13px;
+}
+
+.key:focus, .number:focus, .trong:focus{
+  outline: 0;
+}
+
+button:nth-child(7) {
+  font-size: 10px;
+  background-color: #20b2aa;
+}
+
+button:nth-child(3) {
+  font-size: 10px;
+  background-color: #ffa500;
+}
+
+button:nth-child(12) {
+  font-size: 10px;
+  background-color: #f08080;
+}
+
+button:nth-child(16) {
+  font-size: 10px;
+  background-color: #7d93e0;
+}
+
+button:nth-child(20) {
+  font-size: 10px;
+  background-color: #9477af;
+}
+</style>
+</head>
+<body>
+    <!-- gia tri input value .value -->
+    <div id="may_tinh">
+        <div id="ket_qua">
+            <div id="ket_qua_cu">
+                <p id="gia_tri_cu"></p>
+            </div>
+            <div id="xuat_ket_qua">
+                <p id="gia_tri_xuat" value=""></p>
+            </div>
+        </div>
+        <div id="keyboard">
+            <button class="key" value="C"  id="key_C" onclick="key_C()" >C</button>
+            <button class="key" value="CE" id="key_CE" onclick="key_CE()">CE</button>
+            <button class="key"  value="%" id="%" onclick="insert(this.value)">%</button>
+            <button class="key"  value="/" id="/" onclick="insert(this.value)">&#247;</button>
+            <button class="number"  value="7" id="7" onclick="insert(this.value)">7</button>
+            <button class="number"  value="8" id="8" onclick="insert(this.value)">8</button>
+            <button class="number"  value="9" id="9" onclick="insert(this.value)">9</button>
+            <button class="key"  value="*" id="*" onclick="insert(this.value)">&times;</button>
+            <button class="number"  value="4" id="4" onclick="insert(this.value)">4</button>
+            <button class="number"  value="5" id="5" onclick="insert(this.value)">5</button>
+            <button class="number"  value="6" id="6" onclick="insert(this.value)">6</button>
+            <button class="key"  value="-" id="-" onclick="insert(this.value)">-</button>
+            <button class="number"  value="1" id="1" onclick="insert(this.value)">1</button>
+            <button class="number"  value="2" id="2" onclick="insert(this.value)">2</button>
+            <button class="number"  value="3" id="3" onclick="insert(this.value)">3</button>
+            <button class="key"  value="+" id="+" onclick="insert(this.value)">+</button>
+            <button class="trong"  value="" id="trong"></button>
+            <button class="number"  value="0" id="0" onclick="insert(this.value)">0</button>
+            <button class="trong"  value="" id="trong"></button>
+            <button class="key"  value="=" id="=" onclick="calculate()">=</button>
+        </div>
+    </div>
+    
+</body>
+</html>
+<script>
+    var x=""; //x dai dien cho phim 123456789
+function insert( num){
+   document.getElementById("gia_tri_xuat").innerText+=num;
+   document.getElementById("gia_tri_xuat").value = x;
+}
+function key_CE(){
+    document.getElementById("gia_tri_xuat").innerText =x;
+}
+function key_C() {
+    let s=document.getElementById("gia_tri_xuat").innerText;
+    kq= s.substr(0,s.length-1);
+   document.getElementById("gia_tri_xuat").innerText =kq;
+}
+function calculate() {
+     r = document.getElementById("gia_tri_xuat").innerText;
+     document.getElementById("gia_tri_xuat").innerText = eval(r);
+
+}
+</script>
