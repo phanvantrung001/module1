@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //     var numbers = [
+      //     [5, 12, 17, 9, 3],
+      //     [13, 4, 8, 14, 1],
+      //     [9, 6, 3, 7, 21],
+      //     ];
+
+      // // numbers.push([5, 12, 17, 9, 3]);
+      // // numbers.push([13, 4, 8, 14, 1]);
+      // // numbers.push([9, 6, 3, 7, 21]);
+      // // console.log(numbers);
+      // // alert(numbers[1][2]);
+      // // Lặp theo hàng
+      // for (var i = 0; i < numbers; i++){
+      //      console.log(numbers[i],444);
+      //      // Lặp theo cột, số cộ từ 0 -> số lượng phần tử của hàng i
+      //     //  for (var j = 0; j < numbers[i].length; j++){
+      //     //      console.log(numbers[i][j],222);
+      //     //  }
+      //  }
+      var numbers = [
+        [5, 12, 1, 9, 3],
+        [13, 4, 8,14, 1],
+        [9, 6, 3, 7, 57],
+      ];
+      var sOut="<table border=2>";
+      // Lặp theo hàng
+      for (var i = 0; i < numbers.length; i++) {
+        sOut += "<tr>";
+        // Lặp theo cột, số cộ từ 0 -> số lượng phần tử của hàng   
+        for (var j = 0; j < numbers[i].length; j++) {
+
+          sOut += "<td>" + numbers[i][j] + "</td>";
+
+        }
+        sOut += "</tr>";
+      }
+      sOut += "</table>";
+      document.write(sOut)
+    //   var as2D = [
+    //     ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
+    //     ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"],
+    //     ["ä", "ß", "©", "Ð", "ë", "Ø", ">", "½", "î", "ÿ"],
+    //   ];
+    //   console.log(as2D[2][7]); //1/2
+    //   for (var i = 0; i < as2D.length; i++) {
+    //     // Lặp theo cột, số cộ từ 0 -> số lượng phần tử của hàng i   
+    //     for (var j = 0; j < as2D[i].length; j++) {
+    //       console.log(as2D[i][j]);
+    //     }
+    //   }
+
+    </script>
+  </body>
+</html>
