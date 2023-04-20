@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label for="string">nhap tu:</label>
+    <input type="text" name="" id="string">
+    <button onclick="nhap()">dich</button>
+    <p id="ketqua" ></p>
+</body>
+</html>
+<script>
+    function nhap(){
+    var English = [
+        'hello','mango','guava','apple','melon'
+    ];
+    var tiengviet=[ 
+        'xin chao', 'xoài','ổi','táo','dưa'
+    ];
+    var index_eng = 0;
+    var ketqua;
+    var string = document.getElementById("string").value;
+    for ( var i=0 ; i<English.length ; i++ ){
+        if ( string == English[i]){
+            index_eng = i;
+            for (var j=0 ; j<tiengviet.length;j++){
+                if( index_eng == j){
+                    ketqua = tiengviet[j];
+                }
+            }
+        }
+
+    } 
+    document.getElementById("ketqua").innerHTML= ketqua;
+    
+    }
+</script>
