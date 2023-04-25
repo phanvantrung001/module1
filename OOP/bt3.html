@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Mobile {
+    status; //trạng thái
+    battery; //pin
+    draft; //hộp thư nháp
+    inbox; //hộp thư đến
+    sentbox; //hộp thư gửi
+    constructor(status, battery, draft, inbox, sentbox) {
+        this.sentbox=sentbox;
+        this.battery=battery;
+        this.draft=draft;
+        this.inbox=inbox;
+        this.status=status;
+    }
+    checkStatus(){
+        return this.status;
+    }
+    chargeBattery(){
+        this.battery++;
+    }
+    textMessage(message){
+        this.draft.push(message);
+    }
+    sentMessage(mobile2){
+        let message=this.draft.pop();
+        mobile2.inbox.push(message);
+        this.sentbox.push(message);
+    }
+    reciveMessage(mobile2){
+        let message=mobile2.draft.pop(); 
+        this.inbox.push(message);
+        mobile2.sentbox.push(message);
+    }
+    
+}
+let iphone = new Mobile(true, 50, [], [], []);
+let samsung = new Mobile(true, 70, [], [], []);
+let enter = '</br>';
+if (iphone.checkStatus()){
+    document.write("điện thoại bật" + enter);
+}
+else{
+    document.write("điện thoại tắt" + enter);
+} 
+document.write("Pin trước khi sạc " + iphone.battery + enter);
+iphone.chargeBattery()
+document.write("pin sau khi sạc " + iphone.battery + enter);
+
+iphone.textMessage('hello bạn');
+iphone.textMessage('Mình tên là Tuân');
+document.write(iphone.draft+enter);
+
+iphone.sentMessage(samsung);
+document.write(iphone.draft+enter);
+document.write(iphone.sentbox+enter);
+document.write(samsung.inbox+enter);
+        
+    </script>
+</body>
+</html>

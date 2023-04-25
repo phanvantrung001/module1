@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+<canvas id="myCanvas" width="500" height="600" ></canvas>
+    <script>
+      function Rectangle(dai, rong, dientich, chuvi) {
+        this.dai = dai;
+        this.rong = rong;
+        this.getDai = function(){
+            return this.dai;
+        };
+        this.getRong = function(){
+            return this.rong;
+        };
+        this.getDientich = function () {
+          return this.dai * this.rong;
+        };
+        this.getChuvi = function () {
+          return (this.dai + this.rong) * 2;
+        };
+      }
+      let rectangle = new Rectangle(150, 50);
+      let dientich = rectangle.getDientich();
+      console.log(dientich);
+      let chuvi = rectangle.getChuvi();
+      console.log(chuvi);
+      let dai = rectangle.getDai();
+      let rong = rectangle.getRong();
+      let canvas = document.getElementById("myCanvas");
+      let ctx = canvas.getContext('2d');
+      ctx.fillstyle="#ff80aa";
+      ctx.fillRect(10,10,dai,rong);
+    </script>
+  </body>
+</html>
