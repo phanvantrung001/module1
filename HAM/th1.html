@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* 
+        hàm 
+        - một khối mã 
+        - làm 1 việc cụ thể 
+        2. loại hàm 
+        - Built-in
+        - Tự định nghĩa 
+        3.tính chất của hàm 
+        - không thực thi khi định nghĩa
+        -sẽ thực thi khi được gọi
+        - có thể nhận tham số 
+        - có thể trả về một giá trị 
+        4. tạo hàm đầu tiên 
+        */
+      // a-z A-Z 0-9 $
+      // function xuly(a,b) {
+      //     tong = a+b;
+      //     return tong;
+      // }
+      // var a = parseInt(prompt('nhap a'));
+      // var b = parseInt(prompt('nhap b'));
+
+      // xuly(a,b);
+
+      // console.log(tong);
+
+      function processConfirm(answer) {
+        var ketqua = "";
+        if (answer) {
+          ketqua = "Excellent. We'll play a nice game of chess.";
+        } else {
+          ketqua = "maybe later then.";
+        }
+        return ketqua;
+      }
+      let confirmAnswer = confirm("Shall we play a game?");
+      let theAnswer = processConfirm(confirmAnswer);
+      alert(theAnswer);
+    </script>
+  </body>
+</html>

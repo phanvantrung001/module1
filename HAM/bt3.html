@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //1
+      //     var message = "asddsd";
+      // function alertMessage(message) {
+      //     return message ;
+
+      // }console.log(alertMessage(message));
+      //2
+
+      // function myFunction(a){
+      //     return a += 1;
+      // }
+      // console.log(myFunction(9));
+
+      //3
+    //   var a = parseInt(prompt("nhap a"));
+    //   var b = parseInt(prompt("nhap b"));
+    //   var tong;
+    //   function myNumber(a, b) {
+    //     if (a > b) {
+    //       console.log("a la so lon nhat");
+    //     } else {
+    //       tong = a + b;
+    //     }
+    //     return tong;
+    //   }
+    //   myNumber(a, b);
+    //   console.log(tong);
+      //4
+//       function addNumbers() {
+//     firstNum = 4;
+//     secondNum = 8;
+//     result = firstNum + secondNum;
+//     return result;
+// }
+// result = 0;
+// result = addNumbers(); 
+// alert(result);
+//5
+let star1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+let star2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+function checkStar(star){
+    for( var i = 0; i < star1.length; i++){
+        if(star === star1[i]){
+            return star2[i];
+        }
+    }
+    return 'k tim thay ket qua';
+
+
+}
+ var star = prompt('nhap ngoi sao ');
+ document.write(checkStar(star));
+
+ </script>
+  </body>
+</html>
